@@ -21,6 +21,11 @@ Keep this file open while you work.
 | `content_id` | text | Pseudonymous page id (`content_` + 12 hex chars) | Unique per row. Grouping/joins only |
 | `client_id` | text | Pseudonymous client id (`client_` + 10 hex chars) | 32 distinct values. Use for **client-holdout splits** |
 
+> **Missingness is systematic, not random.** Keyword-context columns are missing along
+> `content_type` lines (e.g. `feedly article` rows have no keyword data at all). A blind
+> `fillna(0)` therefore encodes content type into your features silently — check missingness
+> per content_type before imputing.
+
 ## Keyword context (from content metadata)
 
 | Column | Type | Meaning | Notes |

@@ -2,16 +2,17 @@
 
 **Applied Search Intelligence: Google Search Ranking & Discoverability**
 
-This is the starting point for the FlyRank ML Internship. You **clone it**, build your work in
-**your own public repo**, and share that repo URL with Assignment 1 — it's your workspace, your
-submission, and your portfolio all at once. Everything you build stays there; we review it all
-in one pass at the end of the track.
+This is the starting point for the FlyRank ML Internship. You **clone it into your own public
+repo** (one click — *Use this template*), build everything there, and submit that repo URL on
+each assignment in your portal — it's your workspace, your submission, and your portfolio all
+at once. The rhythm is simple: do the work, commit it, submit on the card. Done.
 
 Everything here runs on a small **anonymized** slice of real FlyRank search data. No credentials,
 no private client data, no setup headaches.
 
-> **New here?** Read **[GUIDE.md](GUIDE.md)** first — every file explained, what to edit vs.
-> leave alone, and where your own work goes. Five minutes.
+> **New here?** Two reads: **[SETUP.md](SETUP.md)** (GitHub, Colab, and data access — ten
+> minutes, with every silent pitfall flagged), then **[GUIDE.md](GUIDE.md)** (every file
+> explained, what to edit vs. leave alone, and where your own work goes — five minutes).
 
 ---
 
@@ -73,8 +74,9 @@ That runs the whole pipeline on the bundled sample and writes results to `output
 ```
 
 On the bundled sample, the learned model clearly beats the hand-written rule at picking the right
-pages to review first (**Precision@50 ≈ 0.24 → 0.74**). The notebooks compute these numbers live, so
-they always reflect the current data.
+pages to review first (**Precision@50 ≈ 0.24 → 0.74**; the model number can land 0.68–0.74
+depending on library versions — the ~3x lift is the point). The notebooks compute these numbers
+live, so they always reflect the current data and environment.
 
 **Teaching point:** the model is the capstone, but the *workflow* is the lesson —
 `problem framing → data cleaning → baseline → first model → evaluation → explainable recommendation`.
@@ -90,14 +92,24 @@ they always reflect the current data.
 - Frame every result as **observed / measured / directional / decision-support** — never
   "I predicted Google's algorithm."
 
-The `.gitignore` blocks datasets by default, and grading checks that no dataset was committed.
+The `.gitignore` blocks datasets by default, and CI fails any commit that includes a dataset.
 
 ---
 
 ## Assignments & schedule
 
-Weekly assignments, live events, and the capstone rubric live on the **InternHQ board** (your mentor
-will point you there). This repo is the shared technical foundation they all build on.
+Weekly assignments, live events, and the capstone live on **your portal board** (your
+enrollment email has your access link). This repo is the shared technical foundation they all
+build on — and the `skills/` folder here is the instruction library for your AI assistant
+(start at [skills/README.md](skills/README.md)).
+
+**First time with GitHub?** You need exactly four things (full walkthrough: [SETUP.md](SETUP.md)):
+1. A free account at github.com.
+2. Your own copy of this repo: **Use this template → Create a new repository** → public.
+   (One click — brings the notebooks, `work/`, and the CI leak-guard with it.)
+3. In Colab: *File → Save a copy in GitHub* → pick your copy, branch `main` (Colab handles auth).
+4. That's your submission repo — share its **github.com/you/your-repo** URL with Assignment 1
+   (never a colab.research.google.com or drive.google.com link).
 
 ---
 
